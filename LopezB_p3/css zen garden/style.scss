@@ -1,0 +1,869 @@
+// Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'The Last Shuriken';
+    font-style: normal;
+    font-weight: normal;
+    src: local('The Last Shuriken'), url('./assets/fonts/The\ Last\ Shuriken/The-Last-Shuriken.woff') format('woff');
+}
+
+.rajdhani-light {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rajdhani-medium {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.rajdhani-semibold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.rajdhani-bold {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+$tablet-breakpoint: 1100px;
+$mobile-breakpoint: 500px;
+
+// Basic reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes wind_to_left {
+    from {
+        left: 2%
+    }
+
+    to {
+        left: 78%
+    }
+}
+
+@keyframes wind_to_right {
+    from {
+        left: 78%
+    }
+
+    to {
+        left: 2%
+    }
+}
+
+@keyframes changeImage1 {
+    25% {
+        background-image: url('./assets/images/Group\ 306.png');
+    }
+
+    40% {
+        background-image: url('./assets/images/Group\ 308.png');
+    }
+
+    55% {
+        background-image: url('./assets/images/Group\ 312.png');
+    }
+
+    70% {
+        background-image: url('./assets/images/Group\ 310.png');
+    }
+
+    85% {
+        background-image: url('./assets/images/Group\ 314.png');
+    }
+
+    100% {
+        background-image: url('./assets/images/Group\ 306.png');
+    }
+}
+
+@keyframes changeImage2 {
+    25% {
+        background-image: url('./assets/images/Group\ 307.png');
+    }
+
+    40% {
+        background-image: url('./assets/images/Group\ 309.png');
+    }
+
+    55% {
+        background-image: url('./assets/images/Group\ 313.png');
+    }
+
+    70% {
+        background-image: url('./assets/images/Group\ 311.png');
+    }
+
+    85% {
+        background-image: url('./assets/images/Group\ 315.png');
+    }
+
+    100% {
+        background-image: url('./assets/images/Group\ 307.png');
+    }
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #dd959d;
+    color: #593131;
+
+    .extra1 {
+        position: absolute;
+        top: 120vw;
+        left: 21.44vw;
+        background: url('./assets/images/Group\ 199.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        height: 20vw;
+        width: 20vw;
+        animation: wind_to_right 30s linear infinite reverse;
+        opacity: 0.7;
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 285vw;
+            left: 10.44vw;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            top: 460vw;
+            left: 7vw;
+        }
+    }
+
+    .extra2 {
+        position: absolute;
+        top: 125vw;
+        left: 38vw;
+        background: url('./assets/images/Group\ 198.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 20vw;
+        width: 20vw;
+        animation: wind_to_right 80s linear infinite reverse;
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 290vw;
+            left: 40vw;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            top: 465vw;
+            left: 38vw;
+        }
+    }
+
+    .extra3 {
+        position: absolute;
+        top: 131vw;
+        right: 15.44vw;
+        background: url('./assets/images/Group\ 200.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        height: 20vw;
+        width: 20vw;
+        animation: wind_to_left 40s linear infinite reverse;
+        opacity: 0.7;
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 300vw;
+            right: 5.44vw;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            top: 474vw;
+        }
+    }
+
+    .extra4 {
+        position: absolute;
+        top: 147vw;
+        right: 4vw;
+        background: url('./assets/images/Vector.png');
+        background-size: 20%;
+        background-repeat: no-repeat;
+        height: 5vw;
+        width: 20vw;
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 320vw;
+            right: -1vw;
+            background-size: 30%;
+            height: 10vw;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    }
+
+    .extra5 {
+        position: absolute;
+        top: 153vw;
+        right: 4vw;
+        background: url('./assets/images/Vector\ \(1\).png');
+        background-size: 20%;
+        background-repeat: no-repeat;
+        height: 5vw;
+        width: 20vw;
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 332vw;
+            right: -1vw;
+            background-size: 30%;
+            height: 10vw;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    }
+
+    .extra6 {
+        position: absolute;
+        top: 158.35vw;
+        right: 4vw;
+        background: url('./assets/images/Vector\ \(2\).png');
+        background-size: 20%;
+        background-repeat: no-repeat;
+        height: 5vw;
+        width: 20vw;
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 344vw;
+            right: -1vw;
+            background-size: 30%;
+            height: 10vw;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    }
+}
+
+.page-wrapper {
+    .intro {
+        background: url('./assets/images/Group\ 306.png');
+        animation: changeImage1 12s infinite;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 26% 50%;
+        background-color: #dd959d;
+        padding: 2vw 21.44vw 0 21.44vw;
+        height: 30vw;
+
+        h1 {
+            color: #593131;
+            font-size: 3vw;
+            font-family: 'The Last Shuriken';
+        }
+
+        h2 {
+            color: #fff;
+            text-align: end;
+            width: 27.5vw;
+            font-size: 1.8vw;
+            font-family: "Rajdhani", sans-serif;
+            font-weight: 600;
+
+            abbr {
+                text-decoration: none;
+            }
+        }
+
+        .summary {
+            background: url('./assets/images/Group\ 307.png');
+            animation: changeImage2 12s infinite;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            background-size: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+            padding-bottom: 18vw;
+            padding-right: 3vw;
+            height: 27.51vw;
+
+            p {
+                width: 20vw;
+                color: #fff;
+                font-size: 1vw;
+                font-family: "Rajdhani", sans-serif;
+                font-weight: 600;
+                text-align: end;
+
+                abbr {
+                    text-decoration: none;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            padding: 2vw 10.44vw 0 10.44vw;
+            background-size: 30%;
+            background-position: 12% 100%;
+            height: 60vw;
+
+            h1 {
+                font-size: 8vw;
+            }
+
+            h2 {
+                width: 74vw;
+                font-size: 4vw;
+            }
+
+            .summary {
+                height: 52vw;
+                background-size: 70%;
+                padding-bottom: 27vw;
+
+                p {
+                    width: 30vw;
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            padding: 4vw 7vw 0 7vw;
+            background-position: 5% 100%;
+            background-size: 40%;
+            height: 90vw;
+
+            h1 {
+                font-size: 8vw;
+            }
+
+            h2 {
+                width: 74vw;
+                font-size: 5vw;
+            }
+
+            .summary {
+                height: 81vw;
+                background-position: 180% 100%;
+                background-size: 82%;
+                padding-bottom: 34vw;
+                padding-right: 2vw;
+
+                p {
+                    width: 40vw;
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+
+    [role="contentinfo"] {
+        position: absolute;
+        top: 3vw;
+        right: 21.44vw;
+        width: 18vw;
+        color: #fff;
+        background: url('./assets/images/Rectangle\ 326.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-left: 1.5vw;
+        font-family: "Rajdhani", sans-serif;
+        font-weight: 600;
+        font-size: 1vw;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: $tablet-breakpoint) {
+            top: 15vw;
+            right: 10.5vw;
+            width: 35vw;
+            font-size: 2vw;
+            background-size: 1.2vw 100%;
+            background-position: 100%;
+            padding-right: 3vw;
+            text-align: end;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            top: 20vw;
+            right: 6vw;
+            width: 45vw;
+            font-size: 2vw;
+            background-size: 1.2vw 100%;
+            padding-left: 3vw;
+        }
+    }
+
+    #zen-supporting {
+        .explanation {
+            display: none;
+        }
+
+        .participation {
+            padding: 2vw 21.44vw 2vw 21.44vw;
+            background: url('./assets/images/Frame.png');
+            background-color: #D9D9D9;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 70% 50%;
+            background-size: 20%;
+            height: 30vw;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0px;
+
+            abbr {
+                text-decoration: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            h3 {
+                background-color: red;
+                background: url('./assets/images/Rectangle\ 324.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                padding-left: 1vw;
+                margin-left: -1vw;
+                height: 3vw;
+                line-height: 3vw;
+                font-size: 2vw;
+                font-family: 'The Last Shuriken';
+                align-items: center;
+            }
+
+            p {
+                width: 30vw;
+                font-size: 1vw;
+            }
+
+            @media only screen and (max-width: $tablet-breakpoint) {
+                padding: 4vw 10.44vw 4vw 10.44vw;
+                background-position: 83% 50%;
+                background-size: 35%;
+                height: 80vw;
+                gap: 1.5vw;
+
+                h3 {
+                    font-size: 5vw;
+                    height: 6vw;
+                    line-height: 6vw;
+                    padding-left: 2.5vw;
+                    margin-left: -2.5vw;
+                }
+
+                p {
+                    width: 40vw;
+                    font-size: 2vw;
+                }
+            }
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                padding: 5vw 7vw 45vw 7vw;
+                background-position: 50% 95%;
+                height: 130vw;
+
+                p {
+                    width: 100%;
+                    font-size: 3vw;
+                }
+            }
+        }
+
+        .benefits {
+            color: #fff;
+            padding: 1vw 21.44vw 0 21.44vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background: url('./assets/images/image 2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 30% 50%;
+            background-size: 15%;
+            height: 20vw;
+            background-color: #dd959d;
+            display: flex;
+            flex-direction: column;
+
+            abbr {
+                text-decoration: none;
+            }
+
+            h3 {
+                background: url('./assets/images/Rectangle\ 326.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 3vw;
+                background-position: 45% 50%;
+                padding-left: 26.1vw;
+                line-height: 3vw;
+                font-size: 2vw;
+                font-family: 'The Last Shuriken';
+                margin-top: 3vw;
+            }
+
+            p {
+                justify-content: center;
+                font-size: 1vw;
+                padding-left: 25vw;
+                margin-top: 1.5vw;
+            }
+
+            @media only screen and (max-width: $tablet-breakpoint) {
+                padding: 2vw 10.44vw 0 10.44vw;
+                background-position: 20% 50%;
+                background-size: 30%;
+                height: 45vw;
+
+                h3 {
+                    font-size: 5vw;
+                    padding-left: 42vw;
+                    background-position: 51% 50%;
+                    background-size: 1vw 100%;
+                    height: 5vw;
+                    line-height: 5vw;
+                }
+
+                p {
+                    margin-top: 4vw;
+                    font-size: 2vw;
+                    padding-left: 40vw;
+                }
+            }
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                padding: 5vw 7vw 45vw 7vw;
+                background-position: 50% 85%;
+                background-size: 40%;
+                height: 90vw;
+
+                h3 {
+                    font-size: 5vw;
+                    padding-left: 35vw;
+                    background-position: 38% 50%;
+                    background-size: 1.2vw 100%;
+                    height: 5vw;
+                    line-height: 5vw;
+                }
+
+                p {
+                    width: 100%;
+                    font-size: 3vw;
+                    padding-left: 0vw;
+                }
+            }
+        }
+
+        .requirements {
+            padding: 2vw 21.44vw 2vw 21.44vw;
+            background-color: #fff;
+            height: 35vw;
+            display: grid;
+            column-gap: 5vw;
+
+            h3 {
+                background: url('./assets/images/Rectangle\ 324.png');
+                background-position: 33.7% 50%;
+                text-align: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 3vw;
+                line-height: 3vw;
+                font-size: 2vw;
+                font-family: 'The Last Shuriken';
+                align-items: center;
+                grid-column: span 2;
+            }
+
+            abbr {
+                text-decoration: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            p {
+                font-size: 1vw;
+                margin-top: 1.5vw;
+            }
+
+            p:nth-child(2) {
+                grid-row: 2;
+                grid-column: 1;
+            }
+
+            p:nth-child(3) {
+                grid-row: 3;
+                grid-column: 1;
+            }
+
+            p:nth-child(4) {
+                grid-row: 2;
+                grid-column: 2;
+            }
+
+            p:nth-child(5) {
+                grid-row: 3;
+                grid-column: 2;
+            }
+
+            @media only screen and (max-width: $tablet-breakpoint) {
+                padding: 4vw 10.44vw 4vw 10.44vw;
+                height: 90vw;
+
+                h3 {
+                    font-size: 5vw;
+                    background-position: 21% 50%;
+                    height: 6vw;
+                    line-height: 6vw;
+                }
+
+                p {
+                    font-size: 2vw;
+                }
+            }
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                padding: 6vw 7vw 6vw 7vw;
+                height: 135vw;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0;
+
+                p {
+                    font-size: 3vw;
+                }
+
+                p:nth-child(2) {
+                    grid-row: 2;
+                    grid-column: 1;
+                }
+
+                p:nth-child(3) {
+                    grid-row: 3;
+                    grid-column: 1;
+                }
+
+                p:nth-child(4) {
+                    grid-row: 4;
+                    grid-column: 1;
+                }
+
+                p:nth-child(5) {
+                    grid-row: 5;
+                    grid-column: 1;
+                }
+            }
+        }
+
+        footer {
+            background-color: #593131;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2vw;
+            height: 4vw;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                padding-left: 2vw;
+                font-family: 'The Last Shuriken';
+                height: 2vw;
+                line-height: 2vw;
+            }
+
+            .zen-validate-css,
+            .zen-license,
+            .zen-accessibility,
+            .zen-github {
+                background: url('./assets/images/Rectangle\ 326.png');
+                background-size: 0.2vw 100%;
+                background-repeat: no-repeat;
+                background-position: 22% 50%;
+                height: 2vw;
+                line-height: 2vw;
+            }
+
+            @media only screen and (max-width: $tablet-breakpoint) {
+                font-size: 2vw;
+                height: 8vw;
+
+                a {
+                    padding-left: 3vw;
+                }
+
+                .zen-validate-css,
+                .zen-license,
+                .zen-accessibility,
+                .zen-github {
+                    background-size: 0.5vw 100%;
+                    height: 3vw;
+                    line-height: 3vw;
+                }
+            }
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                font-size: 3vw;
+                height: 10vw;
+
+                a {
+                    padding-left: 5vw;
+                }
+
+                .zen-validate-css,
+                .zen-license,
+                .zen-accessibility,
+                .zen-github {
+                    background-size: 0.8vw 100%;
+                    height: 4vw;
+                    line-height: 4vw;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        .wrapper {
+            padding: 2vw 21.44vw 2vw 21.44vw;
+            margin-top: 20vw;
+            display: grid;
+            grid-template-columns: 1fr, 1fr;
+            gap: 10px;
+            color: #593131;
+            font-size: 1vw;
+            background-color: #fff;
+
+            ul {
+                list-style: none;
+            }
+
+            h3 {
+                font-family: 'The Last Shuriken';
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            abbr {
+                text-decoration: none;
+            }
+
+            .design-selection {
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(2, 15vw);
+                    gap: 2vw;
+                    margin-top: 2vw;
+                    background: url('./assets/images/Rectangle\ 324.png');
+                    background-size: 0.5vw 100%;
+                    background-position: 86%;
+                    background-repeat: no-repeat;
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                }
+
+                .design-name {
+                    font-family: 'The Last Shuriken';
+                }
+
+                .select {
+                    font-size: 2vw;
+                }
+
+                @media only screen and (max-width: $tablet-breakpoint) {
+                    .select {
+                        font-size: 4vw;
+                    }
+
+                    ul {
+                        background-position: 85%;
+                    }
+                }
+
+                @media only screen and (max-width: $mobile-breakpoint) {
+                    ul {
+                        grid-template-columns: 1fr 1fr;
+                        background-position: 100%;
+                    }
+                }
+
+            }
+
+            .design-archives {
+                margin-top: 4.5vw;
+
+                @media only screen and (max-width: $tablet-breakpoint) {
+                    margin-top: 7vw;
+                }
+            }
+
+            .zen-resources {}
+
+            div:nth-child(1) {
+                grid-column: 1;
+                grid-row: 1/3;
+            }
+
+            div:nth-child(2),
+            div:nth-child(3) {
+                grid-column: 2;
+            }
+
+            @media only screen and (max-width: $tablet-breakpoint) {
+                margin-top: 25vw;
+                padding: 4vw 10.44vw 4vw 10.44vw;
+                font-size: 2vw;
+            }
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                margin-top: 30vw;
+                font-size: 3vw;
+                padding: 6vw 7vw 6vw 7vw;
+            }
+        }
+    }
+}
+
+.preamble {
+    display: none;
+}
